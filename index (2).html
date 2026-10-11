@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#fff9fc" />
+  <meta name="description" content="Fifty little love letters for every kind of day, made with love for my pretty girl." />
+  <title>A Little Box of Love ♡</title>
+  <style>
+:root {
+  --ink: #5d3a59;
+  --muted: #92758b;
+  --berry: #d45f90;
+  --pink: #f47ba9;
+  --line: #f4d4e0;
+  --bg: #fff9fc;
+  --paper: #fff;
+  --accent: #e9a9ca;
+  --shadow: 0 16px 0 #fbe3eb, 0 24px 36px #b66f9b17;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+[hidden] { display: none !important; }
+body {
+  margin: 0; min-height: 100vh; overflow-x: hidden;
+  background: #fff9fc; color: var(--ink);
+  font: 16px/1.6 "Trebuchet MS", "Arial Rounded MT Bold", "Segoe UI", system-ui, sans-serif;
+}
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(circle at 7% 21%, #ffe1ef 0, transparent 29%),
+              radial-gradient(circle at 93% 16%, #eeecff 0, transparent 31%),
+              radial-gradient(circle at 86% 90%, #fff0c9 0, transparent 27%),
+              radial-gradient(circle at 13% 88%, #e9f7eb 0, transparent 32%);
+}
+button { font: inherit; color: inherit; cursor: pointer; }
+button:focus-visible { outline: 3px solid #b64e88; outline-offset: 4px; }
+p,h1,h2,h3 { margin: 0; }
+h1,h2,h3,.serif { font-family: inherit; font-weight: 900; }
+em { font-style: normal; }
+.page { width: min(1080px, calc(100% - 44px)); margin-inline: auto; }
+.site-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 22px 0 8px; }
+.brand { display: inline-flex; align-items: center; gap: 7px; padding: 5px 0; border: 0; background: transparent; font-size: 16px; font-weight: 900; letter-spacing: -.25px; }
+.brand span { display: grid; place-items: center; width: 32px; height: 32px; margin-right: 2px; border-radius: 12px; background: #ffb8d4; color: #fff; font-size: 17px; transform: rotate(-10deg); }
+.top-tag { padding: 8px 14px; border: 2px solid #f6dce8; border-radius: 100px; background: #fff; color: #a46d8b; font-size: 12px; font-weight: 700; }
+.screen { min-height: calc(100svh - 145px); padding-bottom: 50px; animation: pop-in .35s ease both; }
+@keyframes pop-in { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
+.small-title { display: inline-block; color: #c66a98; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 1.8px; }
+.footer { padding: 8px 16px 26px; color: #a9849c; text-align: center; font-size: 12px; font-weight: 600; }
+.footer-hearts { display: inline-block; color: #f285ad; font-size: 21px; letter-spacing: 5px; margin-bottom: 5px; }
+.primary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 11px;
+  border: 2px solid #d86394; border-radius: 100px; background: #ed79a8; color: white;
+  padding: 13px 27px; font-weight: 900; font-size: 15px; box-shadow: 0 5px 0 #cf5c8d;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.primary:hover { background: #e7659b; transform: translateY(-2px); box-shadow: 0 7px 0 #cf5c8d; }
+.primary:active { transform: translateY(3px); box-shadow: 0 2px 0 #cf5c8d; }
+.subtle-btn { display: inline-flex; align-items: center; gap: 7px; padding: 9px 15px; background: #fff; border: 2px solid #f1d8e4; border-radius: 100px; color: #a36085; font-size: 12px; font-weight: 900; transition: background .2s, transform .2s; }
+.subtle-btn:hover { background: #fff0f7; transform: translateY(-1px); }
+/* The opening message is a cozy, colorful card, not a realistic sheet of paper */
+.intro { display: grid; grid-template-columns: .72fr 1.28fr; align-items: center; gap: clamp(24px, 5vw, 72px); max-width: 1030px; margin: auto; padding-top: clamp(48px, 9vh, 95px); }
+.intro-side { position: relative; padding: 0 0 20px; }
+.intro-side .small-title { padding: 6px 12px; background: #ffe2ee; border-radius: 100px; color: #b95b87; letter-spacing: 1px; }
+.intro-side h1 { font-size: clamp(45px, 5.75vw, 74px); line-height: 1.12; letter-spacing: -2.3px; margin: 17px 0 20px; }
+.intro-side h1 em { display: inline; color: #ef76a4; }
+.intro-side > p:not(.small-title) { color: var(--muted); font-size: 16px; max-width: 320px; }
+.intro-bloom { position: relative; margin-top: 38px; width: 225px; height: 150px; }
+.intro-bloom .flower { position: absolute; display: grid; place-items: center; width: 76px; height: 76px; border-radius: 28px; background: #ffe2ee; border: 3px solid white; color: #e67ca4; box-shadow: 0 6px 0 #f6c1d6; font-size: 45px; line-height: 1; }
+.intro-bloom .flower:nth-child(1) { left: 4px; top: 24px; transform: rotate(-13deg); }
+.intro-bloom .flower:nth-child(2) { left: 88px; top: 0; width: 67px; height: 67px; background: #ede2ff; color: #af91dc; transform: rotate(14deg); }
+.intro-bloom .flower:nth-child(3) { left: 145px; top: 48px; width: 63px; height: 63px; background: #fff0ca; color: #e4b855; transform: rotate(-10deg); }
+.intro-bloom .curly { position: absolute; bottom: 0; left: 17px; color: #c18ba5; letter-spacing: 2px; font-size: 12px; font-weight: 800; }
+.letter-paper { position: relative; padding: 48px clamp(24px, 4vw, 48px) 31px; border: 3px solid #f5cbdc; border-radius: 30px; background: #fff; box-shadow: var(--shadow); transform: rotate(.3deg); }
+.letter-paper::before { content: "💌"; position: absolute; top: -28px; left: 50%; display: grid; place-items: center; width: 57px; height: 57px; transform: translateX(-50%) rotate(-8deg); border: 3px solid #f4c9dd; border-radius: 19px; background: #ffeaf3; font-size: 29px; }
+.letter-paper .dear { font-family: inherit; color: #e76c9d; font-size: clamp(22px, 2.6vw, 28px); font-weight: 900; margin: 0 0 18px; }
+.letter-paper p { font-family: inherit; color: #664b62; font-size: 15px; line-height: 1.75; margin-bottom: 13px; }
+.letter-paper .sign { font-weight: 900; color: #c75d8d; margin-bottom: 23px; }
+.letter-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-top: 2px dashed #f8d8e5; padding-top: 21px; }
+.letter-bottom .wax { font-family: inherit; font-size: 26px; color: #f29fc0; }
+/* Five pastel mood cards */
+.choose-head { text-align: center; padding: clamp(42px, 7vh, 82px) 0 36px; }
+.choose-head .small-title { padding: 6px 15px; background: #ffe5ef; border-radius: 100px; letter-spacing: 1.1px; }
+.choose-head h2 { max-width: 780px; font-size: clamp(33px, 4.6vw, 55px); letter-spacing: -1.5px; line-height: 1.15; margin: 18px auto 14px; }
+.choose-head h2 em { color: #ec79a6; }
+.choose-head > p:last-child { color: var(--muted); font-size: 15px; }
+.theme-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; max-width: 940px; margin: auto; }
+.theme-card { --cardbg: #fae0ea; position: relative; grid-column: span 2; display: flex; flex-direction: column; align-items: flex-start; overflow: hidden; min-height: 222px; padding: 21px 22px; border: 3px solid #fff; border-radius: 27px; background: var(--cardbg); text-align: left; box-shadow: 0 7px 0 color-mix(in srgb, var(--cardbg), #a26785 24%); transition: transform .2s, box-shadow .2s; }
+.theme-card:nth-child(4) { grid-column: 2 / span 2; }
+.theme-card:nth-child(5) { grid-column: 4 / span 2; }
+.theme-card:hover { transform: translateY(-5px) rotate(-1deg); box-shadow: 0 12px 0 color-mix(in srgb, var(--cardbg), #a26785 24%); }
+.theme-card::after { content: '♡'; position: absolute; top: -15px; right: 11px; color: #fff9; font-size: 95px; font-weight: 900; transform: rotate(14deg); pointer-events: none; }
+.theme-card .emoji { z-index: 1; display: grid; place-items: center; width: 57px; height: 57px; border: 3px solid #fff; border-radius: 19px; background: #ffffffa6; font-size: 26px; }
+.theme-card h3 { position: relative; z-index: 1; margin: 17px 0 5px; font-family: inherit; font-weight: 900; font-size: 22px; line-height: 1.2; letter-spacing: -.3px; }
+.theme-card .description { position: relative; z-index: 1; font-size: 12px; color: #765a6e; }
+.theme-card .card-foot { z-index: 1; position: relative; display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: auto; padding-top: 16px; color: #875a77; font-weight: 900; font-size: 12px; }
+.choice-end { margin-top: 36px; color: #b27998; text-align: center; font-size: 14px; font-weight: 800; }
+/* Clickable candy-colored cartoon envelopes */
+.theme-page { --accent: #f1a3c2; --tint: #ffebf3; }
+.theme-head { text-align: center; padding: 25px 0 3px; }
+.theme-head .back-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.theme-head .small-title { padding: 6px 14px; background: var(--tint); border-radius: 50px; letter-spacing: 1px; }
+.theme-head h2 { font-size: clamp(34px, 5vw, 56px); line-height: 1.18; letter-spacing: -1.7px; margin: 22px 0 5px; }
+.theme-head .description { color: #92758b; font-size: 15px; }
+.theme-head .letter-counter { display: inline-flex; align-items: center; gap: 7px; margin-top: 16px; padding: 7px 16px; border: 2px solid #fff; border-radius: 100px; background: var(--tint); color: #865975; font-size: 12px; font-weight: 900; }
+.garden { position: relative; isolation: isolate; width: 100%; max-width: 990px; height: 575px; margin: 4px auto 0; }
+.garden::before { content: ""; position: absolute; inset: 5% 0 2%; border-radius: 40%; z-index: -1; background: radial-gradient(ellipse at 29% 40%, var(--tint), transparent 53%), radial-gradient(ellipse at 77% 68%, var(--tint), transparent 50%); opacity: .75; }
+.garden-doodle { position: absolute; color: var(--accent); font-size: 35px; font-family: inherit; font-weight: 900; opacity: .65; pointer-events: none; }
+.doodle1 { left: 1%; top: 6%; } .doodle2 { right: 1%; top: 5%; font-size: 47px; } .doodle3 { left: 48%; bottom: 4%; } .doodle4 { left: 8%; bottom: 16%; }
+.mini-envelope { --rot: 0deg; position: absolute; top: var(--y); left: var(--x); width: 155px; height: 130px; padding: 0; border: 0; background: transparent; transform: translate(-50%, -50%) rotate(var(--rot)); transition: scale .18s ease, filter .18s ease; -webkit-tap-highlight-color: transparent; }
+.mini-envelope:hover, .mini-envelope:focus-visible { scale: 1.075; z-index: 4; filter: brightness(1.04); }
+.mini-envelope .back { position: absolute; inset: 15px 3px 28px; border: 3px solid #fff; border-radius: 14px; background: var(--accent); box-shadow: 0 6px 0 color-mix(in srgb, var(--accent), #a6779d 28%); }
+.mini-envelope .inside { position: absolute; left: 23px; right: 23px; top: 2px; height: 75px; display: flex; justify-content: center; padding-top: 11px; border: 3px solid #fff; border-radius: 10px; background: #fffcff; color: var(--accent); font-size: 17px; font-weight: 900; transition: transform .2s; }
+.mini-envelope:hover .inside { transform: translateY(-7px); }
+.mini-envelope .front { position: absolute; inset: 15px 3px 28px; border-radius: 12px; background: color-mix(in srgb, var(--accent), white 18%); clip-path: polygon(0 8%, 50% 72%, 100% 8%, 100% 100%, 0 100%); }
+.mini-envelope .flap { position: absolute; left: 3px; right: 3px; top: 15px; height: 71px; background: color-mix(in srgb, var(--accent), white 43%); clip-path: polygon(0 0, 100% 0, 50% 83%); }
+.mini-envelope .seal { position: absolute; left: 50%; top: 55px; transform: translateX(-50%); display: grid; place-items: center; width: 33px; height: 33px; border: 3px solid #fff; border-radius: 13px; background: #fff6fc; color: #dc689a; font-size: 16px; font-weight: 900; box-shadow: 0 3px 0 #ba7d9926; }
+.mini-envelope .number { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); display: inline-block; min-width: 106px; padding: 3px 8px; border: 2px solid #fff; border-radius: 50px; background: var(--tint); color: #875a77; font: 900 10px/1.4 "Trebuchet MS", "Segoe UI", sans-serif; letter-spacing: 1.2px; white-space: nowrap; }
+.mini-envelope.opened .seal { background: #ecffe9; color: #509a78; }
+.garden-hint { text-align: center; margin-top: 0; color: #a07894; font-size: 13px; font-weight: 800; }
+/* Notes pop up as happy, rounded cards */
+.veil { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; padding: 17px; background: #49304d9c; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); animation: pop-in .18s ease-out; }
+.dialog { --accent: #e5b4c8; position: relative; overflow: auto; overscroll-behavior: contain; width: min(535px, 100%); max-height: calc(100dvh - 34px); padding: 21px clamp(18px, 4vw, 33px) 28px; border: 4px solid #fff; border-radius: 33px; background: #fff7fb; box-shadow: 0 27px 70px #3e244347; text-align: center; }
+.dialog .exit { position: absolute; top: 13px; right: 13px; display: grid; place-items: center; width: 40px; height: 40px; padding: 0; border: 2px solid #f4d7e5; border-radius: 14px; background: #ffe8f2; color: #9b6482; font-size: 23px; font-weight: 900; line-height: 1; }
+.dialog .top-emoji { width: 65px; height: 65px; display: grid; place-items: center; margin: 3px auto 9px; border: 3px solid #fff; border-radius: 22px; background: #ffe6f0; font-size: 31px; }
+.dialog .mini-title { color: #bc6794; font-size: 12px; letter-spacing: 1.1px; font-weight: 900; text-transform: uppercase; }
+.note-sheet { position: relative; margin: 18px 0 20px; padding: 38px clamp(21px, 4vw, 34px) 30px; border: 3px solid #f7d8e4; border-radius: 24px; background: #fff; box-shadow: 0 7px 0 #fbe1ea; text-align: left; animation: pop-in .3s ease-out; }
+.note-sheet::before { content: '♥'; position: absolute; right: 21px; top: 9px; color: var(--accent); font-size: 22px; }
+.note-sheet .greeting { margin: 0 0 15px; color: #d46c9b; font: 900 21px/1.3 "Trebuchet MS", "Segoe UI", sans-serif; }
+.note-sheet #letter-text { min-height: 90px; color: #684e63; font: 600 clamp(17px, 2.6vw, 19px)/1.75 "Trebuchet MS", "Segoe UI", sans-serif; white-space: pre-line; overflow-wrap: break-word; }
+.note-sheet .signature { margin: 18px 0 0; color: #c26c97; text-align: right; font: 900 15px/1.5 "Trebuchet MS", "Segoe UI", sans-serif; }
+.dialog-buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+.dialog-buttons .primary { font-size: 13px; padding: 11px 20px; }
+.dialog-buttons .subtle-btn { padding: 9px 15px; }
+.saved-title { font: 900 27px/1.25 "Trebuchet MS", "Segoe UI", sans-serif; margin-top: 12px; }
+.saved-list { display: grid; gap: 11px; max-height: 45vh; overflow-y: auto; margin: 21px 0; }
+.saved-entry { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; width: 100%; border: 2px solid #f4d9e5; border-radius: 16px; background: white; padding: 12px 14px; text-align: left; }
+.saved-entry:hover { background: #fff0f7; }
+.saved-entry strong { color: #b35b8b; font-size: 12px; }
+.saved-entry span { color: #6e586a; font: 600 13px/1.5 "Trebuchet MS", "Segoe UI", sans-serif; }
+.empty-saved { color: var(--muted); font-size: 14px; padding: 24px 8px; }
+
+/* A tiny floating song player, in the same playful pastel style */
+.music-dock { position: fixed; z-index: 15; right: max(17px, env(safe-area-inset-right)); bottom: max(17px, env(safe-area-inset-bottom)); display: flex; flex-direction: column; align-items: flex-end; gap: 11px; pointer-events: none; }
+.music-dock > * { pointer-events: auto; }
+.music-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 10px 17px; border: 3px solid white; border-radius: 999px; background: #f28caf; box-shadow: 0 5px 0 #d96f96, 0 11px 28px #85507035; color: #fff; font-size: 14px; font-weight: 900; transition: transform .18s, background .18s; }
+.music-toggle:hover { transform: translateY(-2px); background: #ec78a4; }
+.music-toggle[aria-expanded="true"] { background: #b799d7; box-shadow: 0 5px 0 #9c7aba, 0 11px 28px #85507035; }
+.music-toggle .music-symbol { font-size: 20px; line-height: 1; }
+.music-panel { width: min(340px, calc(100vw - 28px)); overflow: hidden; padding: 16px; border: 3px solid #fff; border-radius: 23px; background: #fff5fb; box-shadow: 0 13px 35px #86527e35, 0 5px 0 #f6cee1; }
+.music-panel-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 9px; margin-bottom: 10px; }
+.music-kicker { color: #be6592; font-weight: 900; font-size: 11px; letter-spacing: .8px; text-transform: uppercase; }
+.music-song { margin-top: 2px; color: #704761; font-size: 16px; font-weight: 900; line-height: 1.3; }
+.music-artist { color: #986d88; font-size: 12px; font-weight: 700; }
+.music-close { display: grid; place-items: center; flex: 0 0 auto; width: 30px; height: 30px; border: 2px solid #f4d4e3; border-radius: 11px; background: white; color: #ae7596; font-size: 21px; line-height: 1; }
+.music-spotify { display: block; width: 100%; height: 152px; border: 0; border-radius: 13px; background: #f4dcec; }
+.music-help { margin-top: 10px; color: #9a7291; font-size: 11px; line-height: 1.5; }
+@media (max-width: 620px) {
+  .music-dock { right: 12px; bottom: max(12px, env(safe-area-inset-bottom)); }
+  .music-toggle { min-height: 49px; padding: 9px 14px; font-size: 12px; }
+  .music-panel { padding: 13px; }
+}
+
+@media (max-width: 800px) {
+  .intro { grid-template-columns: 1fr; max-width: 650px; gap: 32px; padding-top: 28px; }
+  .intro-side { text-align: center; padding: 0; }
+  .intro-side > p:not(.small-title) { margin-inline: auto; }
+  .intro-side h1 { font-size: clamp(42px, 8vw, 59px); margin: 15px 0 10px; }
+  .intro-bloom { display: none; }
+  .letter-paper { transform: none; }
+  .theme-card { min-height: 205px; padding: 18px; }
+  .theme-card h3 { font-size: 21px; }
+  .garden { height: 525px; }
+  .mini-envelope { width: 132px; height: 116px; }
+}
+@media (max-width: 620px) {
+  .page { width: min(calc(100% - 28px), 510px); }
+  .site-header { padding: 15px 0 10px; }
+  .brand { font-size: 13px; }
+  .brand span { width: 29px; height: 29px; }
+  .top-tag { font-size: 10px; padding: 6px 9px; text-align: center; }
+  .intro-side h1 { font-size: clamp(40px, 9vw, 49px); }
+  .intro-side > p:not(.small-title) { font-size: 14px; }
+  .letter-paper { padding: 41px 23px 24px; border-radius: 25px; }
+  .letter-paper p { font-size: 14px; line-height: 1.7; margin-bottom: 12px; }
+  .letter-paper .dear { font-size: 23px; }
+  .letter-bottom { padding-top: 15px; }
+  .theme-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+  .theme-card, .theme-card:nth-child(4), .theme-card:nth-child(5) { grid-column: auto; min-height: 190px; border-radius: 22px; padding: 14px; }
+  .theme-card:nth-child(5) { grid-column: 1 / -1; min-height: 152px; }
+  .theme-card .emoji { width: 45px; height: 45px; border-radius: 16px; font-size: 22px; }
+  .theme-card h3 { font-size: 18px; margin-top: 14px; }
+  .theme-card .description { font-size: 11px; line-height: 1.4; }
+  .theme-card .card-foot { font-size: 11px; padding-top: 10px; }
+  .theme-card:nth-child(5) h3 { margin-top: 9px; }
+  .choose-head { padding-top: 38px; padding-bottom: 29px; }
+  .choose-head h2 { font-size: clamp(35px, 8vw, 44px); }
+  .theme-head { padding-top: 17px; }
+  .theme-head h2 { font-size: clamp(32px, 8.5vw, 43px); margin-top: 19px; }
+  .theme-head .description { font-size: 13px; }
+  .theme-head .back-row .subtle-btn { font-size: 11px; padding: 8px 10px; }
+  .garden { display: grid; position: relative; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 145px; gap: 3px 5px; width: 100%; height: auto; margin-top: 23px; padding: 12px 0 15px; }
+  .garden::before { inset: 0; }
+  .garden-doodle { display: none; }
+  .mini-envelope { position: relative; top: auto; left: auto; width: 137px; height: 120px; margin: auto; transform: rotate(var(--rot)); }
+  .mini-envelope:nth-of-type(4n + 2) { translate: 3px -5px; }
+  .mini-envelope:nth-of-type(4n + 3) { translate: -3px 5px; }
+  .dialog { padding: 17px 17px 24px; border-radius: 25px; }
+  .note-sheet { margin-top: 15px; }
+  .note-sheet #letter-text { font-size: 18px; }
+}
+@media (max-width: 360px) {
+  .top-tag { max-width: 129px; line-height: 1.2; }
+  .mini-envelope { width: 119px; height: 112px; }
+  .mini-envelope .seal { top: 49px; }
+  .mini-envelope .flap { height: 65px; }
+  .theme-card h3 { font-size: 17px; }
+  .theme-grid { gap: 9px; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+<header class="site-header page">
+  <button class="brand" id="home-button" type="button" aria-label="Return to the opening letter"><span>♥</span> a little box of love</button>
+  <span class="top-tag">handmade, with all my heart ♡</span>
+</header>
+<main class="page">
+  <section class="screen intro" id="welcome" aria-labelledby="welcome-title">
+    <div class="intro-side">
+      <p class="small-title">A letter before the letters</p>
+      <h1 id="welcome-title">For my <em>pretty girl.</em> ♡</h1>
+      <p>I made you a tiny place to find me, even when I can't be right beside you.</p>
+      <div class="intro-bloom" aria-hidden="true"><span class="flower">✿</span><span class="flower">✿</span><span class="flower">✿</span><span class="curly">♡ &nbsp; for you, always &nbsp; ♡</span></div>
+    </div>
+    <article class="letter-paper" aria-label="An opening love letter">
+      <p class="dear">To my pretty girl,</p>
+      <p>I made you this little box because I know I can't always be right beside you.</p>
+      <p>There will be days when you're sad, days when everything goes wrong, days when you miss me, and days when you might forget just how amazing you are.</p>
+      <p>So I wanted to leave little pieces of myself here for you.</p>
+      <p>Every tiny letter is a reminder that somewhere in this world, there's a girl who adores you, thinks about you, and feels incredibly lucky to call you hers.</p>
+      <p>Pick a note whenever you need one. And remember, no matter what kind of day you're having, you are loved.</p>
+      <p class="sign">Je t'aime, mon amour. ❤️<br>Your girl. 💋</p>
+      <div class="letter-bottom"><span class="wax" aria-hidden="true">♥ ♡</span><button class="primary" id="continue-button" type="button">Continue <span aria-hidden="true">→</span></button></div>
+    </article>
+  </section>
+  <section class="screen" id="choices" hidden aria-labelledby="choices-title">
+    <div class="choose-head"><p class="small-title">50 love notes · 5 little feelings</p><h2 id="choices-title">What does your heart <em>need today?</em></h2><p>Choose a feeling. I left ten little envelopes inside each one. ♡</p></div>
+    <div class="theme-grid" id="theme-grid"></div>
+    <p class="choice-end">Every little letter is a piece of my heart, just for you.</p>
+    <div style="text-align:center;margin-top:19px;"><button class="subtle-btn" id="saved-from-choices" type="button">♡ Your saved letters <span class="saved-count"></span></button></div>
+  </section>
+  <section class="screen theme-page" id="theme-screen" hidden aria-labelledby="theme-heading">
+    <div class="theme-head">
+      <div class="back-row"><button type="button" class="subtle-btn" id="back-button">← All the feelings</button><button type="button" class="subtle-btn" id="saved-from-theme">♡ Saved <span class="saved-count"></span></button></div>
+      <p class="small-title" style="margin-top:21px;">Little letters, only for you</p>
+      <h2 id="theme-heading">When you're sad</h2>
+      <p class="description" id="theme-description"></p>
+      <p class="letter-counter"><span id="opened-counter">0 of 10 opened</span> <span aria-hidden="true">♡</span></p>
+    </div>
+    <div class="garden" id="garden" aria-label="Ten love-letter envelopes">
+      <span class="garden-doodle doodle1" aria-hidden="true">✧</span><span class="garden-doodle doodle2" aria-hidden="true">♡</span><span class="garden-doodle doodle3" aria-hidden="true">✳</span><span class="garden-doodle doodle4" aria-hidden="true">✧</span>
+    </div>
+    <p class="garden-hint">Tap any envelope to read the little letter inside. 💌</p>
+  </section>
+</main>
+<footer class="footer"><span class="footer-hearts">♡ ♡ ♡</span><div>Made with love, for you and only you.</div></footer>
+<!-- Official embedded player for our song; no audio is copied or redistributed. -->
+<aside class="music-dock" aria-label="Our song player">
+  <div class="music-panel" id="music-panel" hidden>
+    <div class="music-panel-head">
+      <div>
+        <div class="music-kicker">♡ our little soundtrack</div>
+        <p class="music-song">Moonlit Floor (Kiss Me) <span aria-hidden="true">🎀</span></p>
+        <p class="music-artist">LISA</p>
+      </div>
+      <button class="music-close" type="button" id="music-close" aria-label="Close music player">×</button>
+    </div>
+    <iframe class="music-spotify" id="music-spotify" title="Play Moonlit Floor (Kiss Me) by LISA on Spotify" data-src="https://open.spotify.com/embed/track/3yDRcs0Y4pPzkvMbUfeF9H?utm_source=generator" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    <p class="music-help">Tap ▶ in the player to listen. Full-song playback may require Spotify sign-in. ♡</p>
+  </div>
+  <button type="button" id="music-toggle" class="music-toggle" aria-expanded="false" aria-controls="music-panel" aria-label="Open music player for Moonlit Floor by LISA"><span class="music-symbol" aria-hidden="true">🎵</span><span id="music-toggle-label">Our song</span> ♡</button>
+</aside>
+<div class="veil" id="veil" hidden>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="modal-heading" id="dialog" tabindex="-1">
+    <button class="exit" type="button" id="close-modal" aria-label="Close letter">×</button>
+    <div id="single-note">
+      <div class="top-emoji" id="modal-icon" aria-hidden="true">💌</div>
+      <p class="mini-title" id="modal-heading">A little note for you</p>
+      <p style="color:#a08395;font-size:13px;" id="note-position"></p>
+      <article class="note-sheet"><p class="greeting">My love,</p><p id="letter-text"></p><p class="signature">Love, your girl ♡</p></article>
+      <div class="dialog-buttons"><button type="button" class="subtle-btn" id="save-button" aria-pressed="false">♡ Save this one</button><button type="button" class="primary" id="return-to-garden">More envelopes →</button></div>
+    </div>
+    <div id="saved-view" hidden>
+      <div class="top-emoji" aria-hidden="true">💗</div><p class="mini-title" id="saved-heading">Kept close to your heart</p><h2 class="saved-title">Your favorite little letters ♡</h2>
+      <div class="saved-list" id="saved-list"></div>
+      <div class="dialog-buttons"><button type="button" class="primary" id="back-from-saved">Back to my letters →</button></div>
+    </div>
+  </div>
+</div>
+<script>
+  // Personalize the words below anytime. Every theme has exactly TEN individual letters.
+  const themes = [
+    { id:'sad', title:"When you're sad", icon:'☁️', color:'#e1eafa', accent:'#a7c0e4', description:'For when the world feels a little heavy.', notes:[
+      "I wish I could be there right now to wrap my arms around you, kiss your forehead, and make everything feel a little lighter.",
+      "My sweet girl, you don't always have to be strong. Sometimes you can just exist, and that's more than enough.",
+      "If today feels heavy, let me carry a little of that weight with you. You never have to face everything alone.",
+      "I can't promise to fix every bad feeling, but I can promise to hold your hand through them.",
+      "I hope you know that even on the days you don't feel like yourself, you're still my favorite person.",
+      "Close your eyes for a second and imagine me giving you the biggest, warmest hug. Don't let go yet. I'm not done hugging you.",
+      "Your tears don't make you weak, baby. Your feelings deserve just as much love as your smiles do.",
+      "If all you managed to do today was get through it, I'm still so incredibly proud of you.",
+      "Remember our first movie date? You noticed I was cold and went to get me a blanket without me even asking. I want to give you that same kind of care, every time you need it.",
+      "I loved getting to introduce you to my best friend. Sharing my world with you means so much to me. And when you're sad, that world has a place for you too."
+    ]},
+    { id:'miss', title:'When you miss me', icon:'💗', color:'#f9e0e9', accent:'#e5a0b9', description:'Until I get to hold you again.', notes:[
+      "If you're reading this, I wish I was right there stealing kisses from you instead of making you read a piece of paper.",
+      "Consider this note a long-distance kiss. Redeemable for a real one the second you see me. No expiration date.",
+      "Somewhere out there, there's a girl who's completely obsessed with your smile. Spoiler alert: it's me.",
+      "I wonder if you know how often you randomly pop into my head and make me smile like an idiot.",
+      "I miss you too, pretty girl. Even if we literally just saw each other.",
+      "Imagine my hand finding yours, my head resting against you, and me whispering, 'I love you.' That's exactly where I wish I was.",
+      "Every moment apart just makes the next hug, the next kiss, and the next little adventure together that much sweeter.",
+      "Remember our movie date? You came back with a blanket because you heard me say I was cold. I still think about that tiny, beautiful act of love.",
+      "I keep replaying our first kiss at the movies. That silly, sweet slushy taste-test might be my favorite review I've ever given. Five stars. Would kiss again.",
+      "I wish we could press rewind and walk around the zoo together again. Or better yet, make a hundred more memories just like that one."
+    ]},
+    { id:'bad', title:"When you've had a bad day", icon:'🌙', color:'#eee5f8', accent:'#bda5db', description:"For the days that just aren't kind.", notes:[
+      "First of all, I'm officially prescribing you one very long cuddle session with me. Doctor's orders. No arguing.",
+      "Whatever happened today, it doesn't define you. One bad day doesn't make a bad life, my love.",
+      "You survived 100% of your worst days so far. Look at my brave, beautiful girl go.",
+      "I wish I could take all the annoying things that happened today, put them in a tiny box, and throw that box into the ocean.",
+      "If you need to complain about absolutely everything today, I'm listening. No judgment, no trying to fix it unless you want me to.",
+      "You deserve softness, patience, kindness, and a thousand forehead kisses. Especially today.",
+      "The world might have been a little mean to you today, but I'm always going to be on your team.",
+      "Your only job right now is to be gentle with yourself. The rest can wait. I love you.",
+      "You were so patient teaching me to bowl. I hope that when your day feels frustrating, I can be that same patient, gentle place for you.",
+      "If I could, I'd trade this bad day for another day at the zoo with you, where our biggest problem is deciding what to look at next."
+    ]},
+    { id:'doubt', title:'When you doubt yourself', icon:'🌼', color:'#fff0d1', accent:'#e9c37f', description:'A reminder of the girl I see in you.', notes:[
+      "I wish you could see yourself through my eyes just once. You'd understand why I look at you the way I do.",
+      "You don't have to be perfect to be loved. You never did, and you never will.",
+      "I believe in you, even on the days when believing in yourself feels impossible.",
+      "You are so much more than your mistakes, your fears, or the things you think you should have accomplished by now.",
+      "My favorite thing about you isn't just how beautiful you are. It's the person you are when you think nobody's paying attention.",
+      "I'm not with you because I couldn't find someone else. I'm with you because you're the person I want.",
+      "There's no competition, baby. You don't have to become someone else to be enough for me.",
+      "In case nobody's told you today: I'm proud of the woman you are and the woman you're becoming.",
+      "remember the kid that fell at the zoo? thats how i fell for you",
+      "You met my best friend, which meant you got to meet another little part of my life. I wouldn't have wanted to share that part of me with just anyone. You're special to me, exactly as you are."
+    ]},
+    { id:'smile', title:'When you need a smile', icon:'✨', color:'#e0f2e2', accent:'#a5d1ae', description:'A tiny dose of silliness and kisses.', notes:[
+      "ALERT! You've been selected for unlimited kisses from your girlfriend. Please claim your prize immediately.",
+      "Did you smile yet? No? Okay, imagine me doing a ridiculous little happy dance just because you exist.",
+      "Roses are red, violets are blue, I'm incredibly gay, and it's entirely because of you.",
+      "If being cute was illegal, you'd be serving a life sentence. And I'd probably be your very biased lawyer.",
+      "Just a reminder that you have a girlfriend who thinks you're ridiculously pretty. Yes, even with messy hair and sleepy eyes.",
+      "I was going to write something poetic and romantic, but then I remembered your face and forgot how to function.",
+      "This note is a coupon for one kiss. Actually, never mind. Make it 100. I'm feeling generous.",
+      "Still thinking about how patiently you taught me to bowl instead of showing off. Is it possible to get a crush on your own girlfriend? Asking for me.",
+      "At the movies, you asked whether I'd tried your slushy, took a sip, and kissed me so I could taste it. Ma'am, I was trying to watch a movie, not fall head over heels. (It didn't work.)",
+      "The zoo gave us cute animals and an unforgettable little moment. But my favorite thing I got to look at that day was you. Yes, I'm cheesy. No, I'm not sorry."
+    ]}
+  ];
+
+  const positions=[
+    [9,26,-10],[28,17,8],[49,29,-7],[71,15,9],[90,29,-8],
+    [17,61,7],[36,72,-11],[56,60,6],[77,73,-6],[91,83,11]
+  ];
+  const $=id=>document.getElementById(id);
+  const safeRead=(key)=>{try{return JSON.parse(localStorage.getItem(key)||'[]')}catch{return []}};
+  const safeStore=(key,arr)=>{try{localStorage.setItem(key,JSON.stringify(arr))}catch{/* Still works if storage is disabled */}};
+  let opened=safeRead('love-box-opened-v2');
+  let saved=safeRead('love-box-saved-v2');
+  if(!Array.isArray(opened)) opened=[];
+  if(!Array.isArray(saved)) saved=[];
+  let currentTheme=null, currentIndex=0, lastFocus=null, lastModal='note';
+  const key=(id,i)=>`${id}:${i}`;
+  const themeById=id=>themes.find(t=>t.id===id);
+  const allScreens=['welcome','choices','theme-screen'];
+  function showScreen(id){
+    allScreens.forEach(x=>$(x).hidden=x!==id);
+    window.scrollTo({top:0,behavior:'instant'});
+  }
+  function updateSavedCounts(){document.querySelectorAll('.saved-count').forEach(el=>el.textContent=`(${saved.length})`);}
+  function renderThemes(){
+    const grid=$('theme-grid');grid.replaceChildren();
+    themes.forEach((theme,index)=>{
+      const b=document.createElement('button'); b.type='button';b.className='theme-card';
+      b.style.setProperty('--cardbg',theme.color);
+      b.setAttribute('aria-label',`Open ${theme.title}, ten letters`);
+      b.innerHTML=`<span class="emoji" aria-hidden="true">${theme.icon}</span><h3>${theme.title}</h3><p class="description">${theme.description}</p><span class="card-foot"><span>10 little letters</span><span aria-hidden="true">↗</span></span>`;
+      b.addEventListener('click',()=>showTheme(theme.id));grid.appendChild(b);
+    });
+  }
+  function showTheme(id){
+    currentTheme=themeById(id);
+    if(!currentTheme)return;
+    const t=currentTheme;
+    $('theme-screen').style.setProperty('--accent',t.accent);
+    $('theme-screen').style.setProperty('--tint',t.color);
+    $('theme-heading').textContent=t.title;
+    $('theme-description').textContent=t.description;
+    renderGarden();showScreen('theme-screen');
+  }
+  function renderGarden(){
+    const garden=$('garden');garden.querySelectorAll('button').forEach(btn=>btn.remove());
+    currentTheme.notes.forEach((note,i)=>{
+      const [x,y,rot]=positions[i];
+      const b=document.createElement('button'); b.type='button';b.className='mini-envelope';
+      b.style.setProperty('--x',`${x}%`);b.style.setProperty('--y',`${y}%`);b.style.setProperty('--rot',`${rot}deg`);
+      b.setAttribute('aria-label',`Open letter ${i+1} of 10, ${currentTheme.title}`);
+      b.dataset.index=String(i);
+      b.innerHTML=`<span class="back"></span><span class="inside">♡</span><span class="front"></span><span class="flap"></span><span class="seal" aria-hidden="true">♥</span><span class="number">LETTER ${String(i+1).padStart(2,'0')}</span>`;
+      if(opened.includes(key(currentTheme.id,i))){b.classList.add('opened');b.querySelector('.seal').textContent='✓';}
+      b.addEventListener('click',()=>openLetter(i));garden.appendChild(b);
+    });
+    $('opened-counter').textContent=`${currentTheme.notes.filter((_,i)=>opened.includes(key(currentTheme.id,i))).length} of 10 opened`;
+  }
+  function showModal(view){
+    lastFocus=document.activeElement;
+    $('veil').hidden=false;
+    $('single-note').hidden=view!=='note';$('saved-view').hidden=view!=='saved';
+    lastModal=view;document.body.style.overflow='hidden';$('dialog').scrollTop=0;$('close-modal').focus();
+  }
+  function closeModal(){
+    $('veil').hidden=true;document.body.style.overflow='';
+    if(lastFocus && typeof lastFocus.focus==='function')lastFocus.focus();
+  }
+  function openLetter(i){
+    currentIndex=i;
+    const t=currentTheme;
+    const id=key(t.id,i);
+    if(!opened.includes(id)){opened.push(id);safeStore('love-box-opened-v2',opened);renderGarden();}
+    $('modal-icon').textContent=t.icon;
+    $('modal-heading').textContent=t.title;
+    $('note-position').textContent=`Letter ${String(i+1).padStart(2,'0')} / 10`;
+    $('letter-text').textContent=t.notes[i];
+    $('dialog').style.setProperty('--accent',t.accent);
+    refreshSaveButton();
+    showModal('note');
+  }
+  function refreshSaveButton(){
+    const isSaved=saved.includes(key(currentTheme.id,currentIndex));
+    $('save-button').textContent=isSaved?'♥ Saved to favorites':'♡ Save this one';
+    $('save-button').setAttribute('aria-pressed',String(isSaved));
+  }
+  function openSaved(){
+    const list=$('saved-list');list.replaceChildren();
+    if(!saved.length){const p=document.createElement('p');p.className='empty-saved';p.textContent='No favorites just yet. Open a letter and tap “Save this one” whenever you want to keep it close. ♡';list.appendChild(p);}
+    saved.forEach(k=>{
+      const [id,iStr]=k.split(':');const t=themeById(id);const i=Number(iStr);
+      if(!t||!t.notes[i])return;
+      const b=document.createElement('button');b.type='button';b.className='saved-entry';
+      const heading=document.createElement('strong');heading.textContent=`${t.icon} ${t.title} · letter ${i+1}`;
+      const excerpt=document.createElement('span');excerpt.textContent=t.notes[i].slice(0,95)+(t.notes[i].length>95?'…':'');
+      b.append(heading,excerpt);
+      b.addEventListener('click',()=>{if($('theme-screen').hidden){showTheme(id)}else if(currentTheme.id!==id){showTheme(id)}openLetter(i);});
+      list.appendChild(b);
+    });
+    showModal('saved');
+  }
+  function toggleSaved(){
+    const id=key(currentTheme.id,currentIndex);
+    if(saved.includes(id)){saved=saved.filter(k=>k!==id);}else{saved.push(id);}
+    safeStore('love-box-saved-v2',saved);updateSavedCounts();refreshSaveButton();
+  }
+  $('continue-button').addEventListener('click',()=>showScreen('choices'));
+  $('home-button').addEventListener('click',()=>showScreen('welcome'));
+  $('back-button').addEventListener('click',()=>showScreen('choices'));
+  $('close-modal').addEventListener('click',closeModal);
+  $('return-to-garden').addEventListener('click',closeModal);
+  $('save-button').addEventListener('click',toggleSaved);
+  $('saved-from-choices').addEventListener('click',openSaved);
+  $('saved-from-theme').addEventListener('click',openSaved);
+  $('back-from-saved').addEventListener('click',closeModal);
+  $('veil').addEventListener('click',e=>{if(e.target===$('veil'))closeModal();});
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'&&!$('veil').hidden)closeModal();
+    else if(e.key==='Escape'&&!musicPanel.hidden)setMusicPanel(false);
+    if(e.key==='Tab'&&!$('veil').hidden){
+      const els=Array.from($('dialog').querySelectorAll('button:not([hidden])')).filter(el=>el.offsetParent!==null);
+      if(!els.length)return;
+      const first=els[0],last=els[els.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+    }
+  });
+
+  // The corner button reveals a licensed Spotify embed. Spotify controls playback;
+  // browsers do not allow us to autoplay or silently stream a copyrighted track.
+  const musicButton = $('music-toggle');
+  const musicPanel = $('music-panel');
+  const spotifyFrame = $('music-spotify');
+  function setMusicPanel(open){
+    musicPanel.hidden = !open;
+    musicButton.setAttribute('aria-expanded', String(open));
+    musicButton.setAttribute('aria-label', open ? 'Hide music player' : 'Open music player for Moonlit Floor by LISA');
+    $('music-toggle-label').textContent = open ? 'Hide player' : 'Our song';
+    if(open && !spotifyFrame.hasAttribute('src')) spotifyFrame.src = spotifyFrame.dataset.src;
+  }
+  musicButton.addEventListener('click', () => setMusicPanel(musicPanel.hidden));
+  $('music-close').addEventListener('click', () => {setMusicPanel(false);musicButton.focus();});
+  renderThemes();updateSavedCounts();
+</script>
+</body>
+</html>
